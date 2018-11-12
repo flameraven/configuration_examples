@@ -17,7 +17,7 @@ node('masterLin'){
             }
 
             stage('Build docker image'){
-                app = docker.build('app_v1/test_images')
+                app = docker.build('app_v1')
             }
 
             stage('Test image') {
