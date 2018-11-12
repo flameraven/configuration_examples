@@ -28,9 +28,9 @@ node('masterLin'){
 
             stage('Push image'){
                 docker.withRegistry('https://192.168.57.103:8083', 'docker_registry') {
-                app.push("${env.BUILD_NUMBER}")
-                app.push("latest")                
-
+                    app.push("${env.BUILD_NUMBER}")
+                    app.push("latest")
+                }         
             }
             
 //            sh "echo 'Hello World'"
