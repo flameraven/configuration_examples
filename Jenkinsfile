@@ -17,7 +17,7 @@ node('masterLin'){
             }
 
             stage('Build docker image'){
-                app = docker.build('192.168.57.103:8083/test_images')
+                app = docker.build('app_v1/test_images')
             }
 
             stage('Test image') {
