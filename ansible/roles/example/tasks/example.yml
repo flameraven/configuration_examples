@@ -1,0 +1,10 @@
+---
+
+- name: example
+  shell: echo {{ test_variable }}
+  register: my_variable
+
+- name: output my variable
+  debug:
+    msg: "This is my variable from group_vars - {{ test_variable }}"
+  

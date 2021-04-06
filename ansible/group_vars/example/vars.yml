@@ -1,0 +1,8 @@
+---
+
+ansible_user: "{{vault_ansible_user}}"
+ansible_sudo_pass: "{{vault_ansible_sudo_pass}}"
+ansible_ssh_pass: "{{vault_ansible_ssh_pass}}"
+
+
+test_variable: "Hello world"

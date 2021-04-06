@@ -20,20 +20,12 @@ node('masterLin'){
                 app = docker.build('app_v1')
             }
 
-            stage('Test image') {
-                app.inside {
-                    sh 'echo "Tests passed"'
-                }
-            }
-
             stage('Push image'){
-                docker.withRegistry('https://192.168.57.103:8083', 'docker_registry') {
+                docker.withRegistry('https://localhost:8083', 'docker_registry') {
                     app.push("${env.BUILD_NUMBER}")
                     app.push("latest")
                 }         
-            }
-            
-//            sh "echo 'Hello World'"
+            }            
         }
     }
 }
